@@ -12,12 +12,12 @@ services:
       - key: NODE_ENV
         value: production
 
-      # Frontend Host + Port (instead of URL)
-      - key: FRONTEND_HOSTPORT
+      - key: FRONTEND_URL
         fromService:
           type: web
           name: pawmate-frontend
           property: hostport
+        value: https://${pawmate-frontend.hostport}
 
       - key: MONGO_URI
         sync: false
@@ -43,9 +43,9 @@ services:
         source: /*
         destination: /index.html
     envVars:
-      # Backend Host + Port (instead of URL)
-      - key: VITE_API_HOSTPORT
+      - key: VITE_API_URL
         fromService:
           type: web
           name: pawmate-backend
           property: hostport
+        value: https://${pawmate-backend.hostport}
