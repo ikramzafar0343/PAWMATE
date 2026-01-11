@@ -17,7 +17,6 @@ services:
           type: web
           name: pawmate-frontend
           property: hostport
-        value: https://${pawmate-frontend.hostport}
 
       - key: MONGO_URI
         sync: false
@@ -48,4 +47,3 @@ services:
           type: web
           name: pawmate-backend
           property: hostport
-        value: https://${pawmate-backend.hostport}
