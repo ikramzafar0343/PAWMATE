@@ -1,0 +1,5 @@
+# PAWMATE AI Dependencies
+Pillow>=9.0.0
+numpy>=1.21.0
+tensorflow>=2.8.0 
+torch>=1.12.0 

@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-01-08T20:08:56.152Z",
+  "config": {
+    "apiUrl": "http://localhost:5000",
+    "duration": 30,
+    "connections": 10
+  },
+  "results": [
+    {
+      "endpoint": "Health Check",
+      "avgLatency": 0.02845,
+      "p95Latency": 0.08,
+      "p99Latency": 0.799,
+      "requestsPerSecond": 345.5,
+      "throughput": 0.1928853416442871,
+      "totalRequests": 10365,
+      "errors": 0,
+      "status2xx": 10365,
+      "status4xx": 0,
+      "status5xx": 0,
+      "performance": "🟢 EXCELLENT"
+    },
+    {
+      "endpoint": "Get Appointments (Cached)",
+      "avgLatency": 0.02013,
+      "p95Latency": 0.113,
+      "p99Latency": 0.223,
+      "requestsPerSecond": 484.8,
+      "throughput": 0.2357208251953125,
+      "totalRequests": 14544,
+      "errors": 0,
+      "status2xx": 0,
+      "status4xx": 14544,
+      "status5xx": 0,
+      "performance": "🟢 EXCELLENT"
+    },
+    {
+      "endpoint": "Get Pets",
+      "avgLatency": 0.02614,
+      "p95Latency": 0.138,
+      "p99Latency": 0.316,
+      "requestsPerSecond": 375,
+      "throughput": 0.1824183177947998,
+      "totalRequests": 11250,
+      "errors": 0,
+      "status2xx": 0,
+      "status4xx": 11250,
+      "status5xx": 0,
+      "performance": "🟢 EXCELLENT"
+    },
+    {
+      "endpoint": "Get Prescriptions",
+      "avgLatency": 0.018449999999999998,
+      "p95Latency": 0.116,
+      "p99Latency": 0.212,
+      "requestsPerSecond": 526.77,
+      "throughput": 0.2546925926208496,
+      "totalRequests": 15803,
+      "errors": 0,
+      "status2xx": 0,
+      "status4xx": 15803,
+      "status5xx": 0,
+      "performance": "🟢 EXCELLENT"
+    }
+  ],
+  "summary": {
+    "avgLatency": 0.023292499999999997,
+    "totalRPS": 1732.07,
+    "totalErrors": 0
+  }
+}

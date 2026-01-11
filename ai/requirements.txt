@@ -1,0 +1,23 @@
+# PAWPAL AI Disease Detection - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# IMPORTANT: TensorFlow installation may fail on some systems
+# The system works WITHOUT TensorFlow using mock predictions
+# Only install if you have a trained model to use
+
+# Option 1: Try TensorFlow (may not work on all systems)
+# Uncomment the line below if you want to try:
+# tensorflow>=2.8.0
+
+# Option 2: PyTorch (alternative, often easier to install)
+# Uncomment if TensorFlow doesn't work:
+# torch>=1.12.0
+# torchvision>=0.13.0
+
+# Image Processing (REQUIRED - install these)
+Pillow>=9.0.0
+numpy>=1.21.0
+
+# Optional: For better performance
+# opencv-python>=4.6.0
+
