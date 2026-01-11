@@ -1,5 +1,7 @@
 services:
+  # ========================
   # Backend Service
+  # ========================
   - type: web
     name: pawmate-backend
     env: node
@@ -9,11 +11,14 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: FRONTEND_URL
+
+      # Frontend Host + Port (instead of URL)
+      - key: FRONTEND_HOSTPORT
         fromService:
           type: web
           name: pawmate-frontend
-          property: url
+          property: hostport
+
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
@@ -25,7 +30,9 @@ services:
       - key: CLOUDINARY_API_SECRET
         sync: false
 
+  # ========================
   # Frontend Service
+  # ========================
   - type: web
     name: pawmate-frontend
     env: static
@@ -36,8 +43,9 @@ services:
         source: /*
         destination: /index.html
     envVars:
-      - key: VITE_API_URL 
-        fromService: 
-          type: web 
-          name: pawmate-backend 
-          property: url
+      # Backend Host + Port (instead of URL)
+      - key: VITE_API_HOSTPORT
+        fromService:
+          type: web
+          name: pawmate-backend
+          property: hostport
